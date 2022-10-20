@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="nopCommerce">
+
+	<listeners>
+		<listener class-name="com.nopCommerceV2.utilities.Reporting" />
+		<listener class-name="com.nopCommerceV2.utilities.MyTransformer" />
+	</listeners>
+
+	<test name="nopCommerce Test1">
+		<parameter name="browser" value="chrome" />
+		<classes>
+		
+			<class name="com.nopCommerceV2.testCases.TC_LoginTest_001" />
+			<class name="com.nopCommerceV2.testCases.TC_LoginDDT_002" />
+			<class name="com.nopCommerceV2.testCases.TC_AddCustomerTest_003"/>
+			<class name="com.nopCommerceV2.testCases.TC_SearchCustomerTest_004"/>
+			  
+		</classes>
+	</test>
+	
+	<!-- <test name="nopCommerce Test2">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="com.nopCommerceV2.testCases.TC_LoginTest_001" />
+		</classes>
+	</test> -->
+	
+</suite>
